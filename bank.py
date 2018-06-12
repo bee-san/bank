@@ -31,8 +31,11 @@ class finance():
     def __init__(self, x):
         """ Constructor method """
         self.initial_natwest = x 
-        # TODO replace latest with CSV value
-        latest = 360
+
+        latest_file = open("data.txt", "r")
+        latest_file_read = latest_file.read().split(" ")
+        latest = latest_file_read[0]
+        latest = float(latest)
 
         # If you've put in £50 and theres £100 in the account this will mess it up
         ## that's why absolute is used.
@@ -40,6 +43,13 @@ class finance():
         newly_added = float(abs(self.initial_natwest - latest))
         self.initial_take_out = float(newly_added * 0.8)
         self.updated_take_out = float(self.initial_take_out)
+
+        latest_file.close()
+        latest_file = open("data.txt", "w")
+        latest_file_read.append(str(abs(self.initial_natwest - self.initial_take_out)))
+        latest_file_data = ' '.join(latest_file_read)
+        latest_file.write(latest_file_data)
+        latest_file.close()
 
         self.high_vol = 0.0
         self.invest = 0.0
