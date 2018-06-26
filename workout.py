@@ -23,7 +23,8 @@ They do not charge a fee under £5000, whereas Vanguard does.
 
 I wanted to find out if it was worth it to go with Vanguard for the fee or Wealthsimple
 
-Results of experiment over 144 months, where the result is only printed every 12 months and you put in £100 a month:
+Results of experiment over 144 months, where the result is only printed every 12 months and you put in £100 a month are below.
+To read a more detailed description of when exactly is it worth it to switch to a Vanguard account skip this part:
 
 Month 12 Wealthsimple: £1592 Vanguard: £1664
 Removing the £100 this would be, Wealthsimple: £392 Vanguard: £464
@@ -79,7 +80,8 @@ Month 12 Wealthsimple: £1592 Vanguard: £1747
 Conclusion: Although Wealthsimple may seem like the better option, going with Vanguard from the get-go gets you the good returns.
 
 But this is assuming Vanguard will return 8%. If they return 7%, Vanguard will still be better to go with.
-If they return 6%, Wealthsimple would be better to go with for the first 4 years.
+If they return 6%, Wealthsimple would be better to go with for the first 4 years. Assuming you put in £100 a month,
+and wealthsimple and vanguard both return 6% a year.
 
 You do not know how the market will behave, however, look here:
 
@@ -108,37 +110,45 @@ Vanguard will take over as the most worthwhile in a year or two.
 
 class vanguard():
     def __init__(self):
-        self.fee = 0.4
-        self.monthlyReturn = 0.6 / 12.0
+        self.fee = 0.22
+        self.monthlyReturn = 0.861 / 12.0
         self.total = 0.0
+        self.interest = 0.00
 
     # function to add £100 to this fund
     def add100(self, year):
         # if year is true (it's the 12th month)
-        self.total = self.total + 100 + (self.total * self.monthlyReturn)
+        #self.total = self.total + 100 + percentage(self.total, 0.861)
+        self.total = self.total + 100 + percentage(self.monthlyReturn, self.total)
+        self.interest = self.interest + percentage(self.monthlyReturn, self.total)
         if year:
             # take away the fee
-            self.total = self.total - ((self.total * self.fee) / 100.0)
+            self.total = self.total - percentage(self.fee, self.total)
+
 
 class wealthSimple():
     def __init__(self):
         self.fee = 0.7
         self.monthlyReturn = 0.6 / 12.0
         self.total = 0.0
+        self.interest = 0.0
     
     def add100(self, year):
-        self.total = self.total + 100 + (self.total * self.monthlyReturn)
+        self.total = self.total + 100 + percentage(self.monthlyReturn, self.total)
+        self.interest = self.interest + percentage(self.monthlyReturn, self.total)
         if year:
-            if self.total < 5000:
+            if self.total < 6100:
                 self.total = self.total
             else:
-                print("the fee is applied")
-                self.total = self.total - ((self.total * self.fee) / 100.0)
+                self.total = self.total - percentage(self.fee, self.total)
+
+def percentage(percent, whole):
+    return (percent * whole) / 100.0
 
 wealthSimple = wealthSimple()
 vanguard = vanguard()
 
-for i in range(1, 145):
+for i in range(1, 73):
     year = False
     if i % 12 == 0 and i is not 0:
         year = True
@@ -146,4 +156,4 @@ for i in range(1, 145):
     vanguard.add100(year)
     if year:
         print("Month " + str(i) + " Wealthsimple: £" + str(round(wealthSimple.total)) + " Vanguard: £" + str(round(vanguard.total)))
-        print("Removing the £100 this would be, Wealthsimple: £" + str(round(wealthSimple.total - (100 * i))) + " Vanguard: £" + str(round(vanguard.total - (100 * i))))
+        print("Interest is Wealthsimple: £" + str(round(wealthSimple.interest)) + " Vanguard: £" + str(round(vanguard.interest)))
