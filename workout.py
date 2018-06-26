@@ -24,6 +24,23 @@ They do not charge a fee under £5000, whereas Vanguard does.
 I wanted to find out if it was worth it to go with Vanguard for the fee or Wealthsimple
 
 Results of experiment over 144 months, where the result is only printed every 12 months and you put in £100 a month are below.
+Variables used for this calculation:
+
+YEARS_TO_INVEST = 12
+# computers count from 0
+MONTHS_TO_INVEST = YEARS_TO_INVEST * 12 + 1
+START_WITH = 0.00
+ADD_MONTHLY = 100
+
+# how much fee free you get in wealth simple
+# £5000 fee free for every friend you refer
+WEALTHSIMPLE_FEE_FREE = 6100
+WEALTHSIMPLE_YEAR_RETURN = 0.6
+
+# based on vanguard life stratergy 80 / 20
+VANGUARD_YEAR_RETURN = 0.861
+
+Printed:
 
 Year 1 Wealthsimple: £1203 Vanguard: £1202
 Interest is Wealthsimple: £4 Vanguard: £6
