@@ -24,102 +24,64 @@ They do not charge a fee under £5000, whereas Vanguard does.
 I wanted to find out if it was worth it to go with Vanguard for the fee or Wealthsimple
 
 Results of experiment over 144 months, where the result is only printed every 12 months and you put in £100 a month are below.
-To read a more detailed description of when exactly is it worth it to switch to a Vanguard account skip this part:
 
-Month 12 Wealthsimple: £1592 Vanguard: £1664
-Removing the £100 this would be, Wealthsimple: £392 Vanguard: £464
-Month 24 Wealthsimple: £4450 Vanguard: £4936
-Removing the £100 this would be, Wealthsimple: £2050 Vanguard: £2536
-the fee is applied
-Month 36 Wealthsimple: £9517 Vanguard: £11372
-Removing the £100 this would be, Wealthsimple: £5917 Vanguard: £7772
-the fee is applied
-Month 48 Wealthsimple: £18551 Vanguard: £24030
-Removing the £100 this would be, Wealthsimple: £13751 Vanguard: £19230
-the fee is applied
-Month 60 Wealthsimple: £34663 Vanguard: £48922
-Removing the £100 this would be, Wealthsimple: £28663 Vanguard: £42922
-the fee is applied
-Month 72 Wealthsimple: £63394 Vanguard: £97877
-Removing the £100 this would be, Wealthsimple: £56194 Vanguard: £90677
-the fee is applied
-Month 84 Wealthsimple: £114631 Vanguard: £194154
-Removing the £100 this would be, Wealthsimple: £106231 Vanguard: £185754
-the fee is applied
-Month 96 Wealthsimple: £206000 Vanguard: £383499
-Removing the £100 this would be, Wealthsimple: £196400 Vanguard: £373899
-the fee is applied
-Month 108 Wealthsimple: £368937 Vanguard: £755875
-Removing the £100 this would be, Wealthsimple: £358137 Vanguard: £745075
-the fee is applied
-Month 120 Wealthsimple: £659500 Vanguard: £1488212
-Removing the £100 this would be, Wealthsimple: £647500 Vanguard: £1476212
-the fee is applied
-Month 132 Wealthsimple: £1177657 Vanguard: £2928470
-Removing the £100 this would be, Wealthsimple: £1164457 Vanguard: £2915270
-the fee is applied
-Month 144 Wealthsimple: £2101680 Vanguard: £5760966
-Removing the £100 this would be, Wealthsimple: £2087280 Vanguard: £5746566
+Year 1 Wealthsimple: £1203 Vanguard: £1202
+Interest is Wealthsimple: £4 Vanguard: £6
+Year 2 Wealthsimple: £2414 Vanguard: £2412
+Interest is Wealthsimple: £15 Vanguard: £22
+Year 3 Wealthsimple: £3632 Vanguard: £3630
+Interest is Wealthsimple: £33 Vanguard: £48
+Year 4 Wealthsimple: £4857 Vanguard: £4855
+Interest is Wealthsimple: £59 Vanguard: £85
+Year 5 Wealthsimple: £6089 Vanguard: £6088
+Interest is Wealthsimple: £92 Vanguard: £133
+Year 6 Wealthsimple: £7278 Vanguard: £7329
+Interest is Wealthsimple: £133 Vanguard: £191
+Year 7 Wealthsimple: £8465 Vanguard: £8579
+Interest is Wealthsimple: £181 Vanguard: £260
+Year 8 Wealthsimple: £9652 Vanguard: £9836
+Interest is Wealthsimple: £236 Vanguard: £340
+Year 9 Wealthsimple: £10837 Vanguard: £11101
+Interest is Wealthsimple: £298 Vanguard: £431
+Year 10 Wealthsimple: £12020 Vanguard: £12375
+Interest is Wealthsimple: £367 Vanguard: £532
+Year 11 Wealthsimple: £13203 Vanguard: £13656
+Interest is Wealthsimple: £443 Vanguard: £645
+Year 12 Wealthsimple: £14384 Vanguard: £14946
+Interest is Wealthsimple: £526 Vanguard: £769
 
-** RESULTS OF FIRST YEAR **
-Each month is printed here:
+Even though Vanguard earns more interest, for the first 6 years Wealthsimple will give you more money.
+Although it's not a lot more, it's still more.
 
-Month 1 Wealthsimple: £100 Vanguard: £100
-Month 2 Wealthsimple: £205 Vanguard: £207
-Month 3 Wealthsimple: £315 Vanguard: £320
-Month 4 Wealthsimple: £431 Vanguard: £442
-Month 5 Wealthsimple: £553 Vanguard: £571
-Month 6 Wealthsimple: £680 Vanguard: £709
-Month 7 Wealthsimple: £814 Vanguard: £857
-Month 8 Wealthsimple: £955 Vanguard: £1014
-Month 9 Wealthsimple: £1103 Vanguard: £1181
-Month 10 Wealthsimple: £1258 Vanguard: £1360
-Month 11 Wealthsimple: £1421 Vanguard: £1551
-Month 12 Wealthsimple: £1592 Vanguard: £1747
 
-Conclusion: Although Wealthsimple may seem like the better option, going with Vanguard from the get-go gets you the good returns.
-
-But this is assuming Vanguard will return 8%. If they return 7%, Vanguard will still be better to go with.
-If they return 6%, Wealthsimple would be better to go with for the first 4 years. Assuming you put in £100 a month,
-and wealthsimple and vanguard both return 6% a year.
-
-You do not know how the market will behave, however, look here:
-
-Month 12 Wealthsimple: £1592 Vanguard: £1585
-Removing the £100 this would be, Wealthsimple: £392 Vanguard: £385
-Month 24 Wealthsimple: £4450 Vanguard: £4421
-Removing the £100 this would be, Wealthsimple: £2050 Vanguard: £2021
-the fee is applied
-Month 36 Wealthsimple: £9517 Vanguard: £9493
-Removing the £100 this would be, Wealthsimple: £5917 Vanguard: £5893
-
-Assuming you put £100 in each month you'll reach the £5k limit by the start of the third year.
-The money you earn from wealthsimple is £29 more than Vanguard. After the third year Wealthsimple is still worth it
-but they don't make **that** much money more, just £24 more.
-
-After the fourth year, the results look like this:
-
-Removing the £100 this would be, Wealthsimple: £13751 Vanguard: £13765
-
-Vanguard is now worth more.
-
-In total, you're set to make around £50 more if you went with Wealthsimple than if you went with Vanguard at the start.
-Assuming you input £100 per month. If you put in more than £100 a month, you'll reach the £5k limit faster which means that
-Vanguard will take over as the most worthwhile in a year or two.
 """
+
+YEARS_TO_INVEST = 12
+# computers count from 0
+MONTHS_TO_INVEST = YEARS_TO_INVEST * 12 + 1
+START_WITH = 0.00
+ADD_MONTHLY = 100
+
+# how much fee free you get in wealth simple
+# £5000 fee free for every friend you refer
+WEALTHSIMPLE_FEE_FREE = 6100
+WEALTHSIMPLE_YEAR_RETURN = 0.6
+
+# based on vanguard life stratergy 80 / 20
+VANGUARD_YEAR_RETURN = 0.861
 
 class vanguard():
     def __init__(self):
         self.fee = 0.22
-        self.monthlyReturn = 0.861 / 12.0
-        self.total = 0.0
+        self.monthlyReturn = VANGUARD_YEAR_RETURN / 12.0
+        self.total = START_WITH
         self.interest = 0.00
 
     # function to add £100 to this fund
     def add100(self, year):
         # if year is true (it's the 12th month)
         #self.total = self.total + 100 + percentage(self.total, 0.861)
-        self.total = self.total + 100 + percentage(self.monthlyReturn, self.total)
+        self.total = self.total + ADD_MONTHLY + percentage(self.monthlyReturn, self.total)
         self.interest = self.interest + percentage(self.monthlyReturn, self.total)
         if year:
             # take away the fee
@@ -129,15 +91,15 @@ class vanguard():
 class wealthSimple():
     def __init__(self):
         self.fee = 0.7
-        self.monthlyReturn = 0.6 / 12.0
+        self.monthlyReturn = WEALTHSIMPLE_YEAR_RETURN / 12.0
         self.total = 0.0
         self.interest = 0.0
     
     def add100(self, year):
-        self.total = self.total + 100 + percentage(self.monthlyReturn, self.total)
+        self.total = self.total + ADD_MONTHLY + percentage(self.monthlyReturn, self.total)
         self.interest = self.interest + percentage(self.monthlyReturn, self.total)
         if year:
-            if self.total < 6100:
+            if self.total < WEALTHSIMPLE_FEE_FREE:
                 self.total = self.total
             else:
                 self.total = self.total - percentage(self.fee, self.total)
@@ -148,12 +110,14 @@ def percentage(percent, whole):
 wealthSimple = wealthSimple()
 vanguard = vanguard()
 
-for i in range(1, 73):
+year_num = 0
+for i in range(1, MONTHS_TO_INVEST):
     year = False
     if i % 12 == 0 and i is not 0:
         year = True
+        year_num = year_num +  1
     wealthSimple.add100(year)
     vanguard.add100(year)
     if year:
-        print("Month " + str(i) + " Wealthsimple: £" + str(round(wealthSimple.total)) + " Vanguard: £" + str(round(vanguard.total)))
+        print("Year " + str(year_num) + " Wealthsimple: £" + str(round(wealthSimple.total)) + " Vanguard: £" + str(round(vanguard.total)))
         print("Interest is Wealthsimple: £" + str(round(wealthSimple.interest)) + " Vanguard: £" + str(round(vanguard.interest)))
