@@ -1,10 +1,28 @@
 """
 I have 2 investment choices:
 
-Wealthsimple with free fee of under £6100 but with a return is 6%
-and Vanguard with a fee of 0.40% fee but return of 8%
+Wealthsimple with fee free of under £6100 but with a fee of 0.7% over £6100. a return of 6% annually
+and Vanguard with a fee of 0.40% fee and return of 8.61% annually
+
+I'm investing X amount per month for Y years.
 
 What is the best one to choose?
+
+For reference, these are the numbers I used:
+
+YEARS_TO_INVEST = 12
+# computers count from 0
+MONTHS_TO_INVEST = YEARS_TO_INVEST * 12 + 1
+START_WITH = 0.00
+ADD_MONTHLY = 100
+
+# how much fee free you get in wealth simple
+# £5000 fee free for every friend you refer
+WEALTHSIMPLE_FEE_FREE = 6100
+WEALTHSIMPLE_YEAR_RETURN = 0.6
+
+# based on vanguard life stratergy 80 / 20
+VANGUARD_YEAR_RETURN = 0.861
 
 Numbers taken from:
 
@@ -73,16 +91,16 @@ Although it's not a lot more, it's still more.
 
 """
 
-YEARS_TO_INVEST = 12
+YEARS_TO_INVEST = 25
 # computers count from 0
 MONTHS_TO_INVEST = YEARS_TO_INVEST * 12 + 1
 START_WITH = 0.00
-ADD_MONTHLY = 100
+ADD_MONTHLY = 1000
 
 # how much fee free you get in wealth simple
 # £5000 fee free for every friend you refer
-WEALTHSIMPLE_FEE_FREE = 6100
-WEALTHSIMPLE_YEAR_RETURN = 0.6
+WEALTHSIMPLE_FEE_FREE = 11100
+WEALTHSIMPLE_YEAR_RETURN = 0.8
 
 # based on vanguard life stratergy 80 / 20
 VANGUARD_YEAR_RETURN = 0.861
@@ -128,6 +146,7 @@ wealthSimple = wealthSimple()
 vanguard = vanguard()
 
 year_num = 0
+check = True
 for i in range(1, MONTHS_TO_INVEST):
     year = False
     if i % 12 == 0 and i is not 0:
@@ -138,3 +157,6 @@ for i in range(1, MONTHS_TO_INVEST):
     if year:
         print("Year " + str(year_num) + " Wealthsimple: £" + str(round(wealthSimple.total)) + " Vanguard: £" + str(round(vanguard.total)))
         print("Interest is Wealthsimple: £" + str(round(wealthSimple.interest)) + " Vanguard: £" + str(round(vanguard.interest)))
+        if vanguard.total > wealthSimple.total and check:
+            print("**Vanguard has crossed wealth simple**")
+            check = False

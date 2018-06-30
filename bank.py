@@ -36,12 +36,18 @@ class finance():
         latest_file_read = latest_file.read().split(" ")
         latest = latest_file_read[0]
         latest = float(latest)
+        self.natwest_balance = latest
 
         # If you've put in £50 and theres £100 in the account this will mess it up
         ## that's why absolute is used.
         # I also want to save 20% of the natwest account in the savings itself
         newly_added = float(abs(self.initial_natwest - latest))
-        self.initial_take_out = float(newly_added * 0.8)
+        if self.natwest_balance > 600:
+            self.initial_take_out = float(newly_added)
+            self.more600 = True
+            self.over60020Percent = newly_added * 0.2
+        else:
+            self.initial_take_out = float(newly_added * 0.8)
         self.updated_take_out = float(self.initial_take_out)
 
         latest_file.close()
@@ -55,13 +61,26 @@ class finance():
         self.invest = 0.0
         self.other_savings = 0.0
 
-        # 10% for cryptocurrency
-        self.high_vol = self.updated_take_out * 0.10
-        self.updateTakeout(self.high_vol)
+        # vanguard requires at least £100 per month
+        if self.updated_take_out * 0.40 < 100.0:
+            if self.updated_take_out * 0.45 > 99.99:
+                self.invest = self.updated_take_out * 0.45
+                self.updateTakeout(self.invest)
 
-        # 40% for low - mid range investments
-        self.invest = self.updated_take_out * 0.40
-        self.updateTakeout(self.invest)
+                self.high_vol = self.updated_take_out * 0.05
+                self.updateTakeout(self.high_vol)
+            elif self.updated_take_out * 0.5 > 99.99:
+                self.invest = self.updated_take_out * 0.5
+                self.updateTakeout(self.invest)
+
+                self.high_vol = self.updated_take_out * 0
+                self.updateTakeout(self.high_vol)
+        else:
+            self.invest = self.updated_take_out * 0.40
+            self.updateTakeout(self.invest)
+
+            self.high_vol = self.updated_take_out * 0.10
+            self.updateTakeout(self.high_vol)
 
         self.left_with = self.initial_take_out - (self.invest + self.high_vol)
 
@@ -81,17 +100,24 @@ class finance():
     
     def printAll(self):
         print("\nYou should take out £" + str(round(self.initial_take_out)) + " out of your NatWest account")
+        if self.more600:
+            print("You should invest £" + str(self.over60020Percent) + " into something")
         print("You should put £" + str(round(self.high_vol)) + " into cryptocurrencies")
 
-        if self.high_vol > 100:
+        if self.high_vol > 50:
             print("    * Split 4 ways this is £" + str(round(self.high_vol / 4.00)))
             print("    * Split 3 ways this is £" + str(round(self.high_vol / 3.0)))
 
-        print("You should put £" + str(round(self.invest)) + " into low-midrange investments")
+        print("You should put £" + str(round(self.invest)) + " into Vanguard LS 80")
         print("This leaves you with £" + str(round(self.left_with)))
-        print("    * Split over 4 weeks this is £" + str(round(self.left_with / 4.0)))
-        print("    * 10% to put into a holiday pot is £" + str(round(self.left_with * 0.10)))
-        print("Left in your NatWest is £" + str(self.left_over))
+        self.updateTakeout(30)
+        print("Taking away your subscriptions (£30) this is £" + str(round(self.updated_take_out)))
+        self.updateTakeout(75)
+        print("Take away £75 for your chocolate addiction this is £ " + str(round(self.updated_take_out)))
+        print("* 10% to put into a holiday pot is £" + str(round(self.updated_take_out * 0.10)))
+        print("* Split over 4 weeks this is £" + str(round(self.updated_take_out / 4.0)))
+        print("You should put roughly £" + str(round(self.updated_take_out / 11)) + " into each YNAB category")
+        print("Left in your NatWest is £" + str(round(self.left_over)))
 
         if (self.left_with / 4.0) > 45.0:
             print("Overall this was a good financial month, well done!!")
@@ -136,7 +162,7 @@ class monzoAPI():
                 merchant = "No merchant for this item"
             # Date
             date = item.created
-            amount = int(item.amount)
+            amount = float(item.amount)
             transactionsParsed.append({
                 'date': date,
                 'transaction': amount,
@@ -167,6 +193,6 @@ class monzoAPI():
             print(ordered_transactions)
             return ordered_transactions
 
-x = int(input("How much money do you have in your account? "))
+x = float(input("How much money do you have in your account? "))
 obj = finance(x)
 obj.printAll()
